@@ -1,0 +1,691 @@
+{
+  "year_level": "7",
+  "subject": "Science",
+  "standards": [
+    {
+      "code": "AC9S7U01",
+      "title": "Classification and Biodiversity",
+      "description": "Investigate the role of classification in ordering and organising the diversity of life on Earth and use and develop classification tools including dichotomous keys",
+      "prior_knowledge": "Students can name and describe familiar living things and sort them into broad groups (animals, plants). They have not studied formal taxonomy or constructed classification tools.",
+      "y_goal": "Students explain why classification systems are used, apply and construct dichotomous keys, and evaluate how classification tools order and organise biodiversity.",
+      "nodes": [
+        {
+          "id": 1,
+          "label": "Purpose of classification",
+          "xmin": "State at least two reasons why scientists classify living things; give one example of classification in everyday life",
+          "width_core": "Compare two different classification systems; explain which is more useful for a given purpose and why",
+          "width_enrich_options": [
+            "Investigate how Aboriginal and Torres Strait Islander peoples classify living things on Country and compare with Linnaean taxonomy \u2014 what does each system prioritise?",
+            "Research how classification systems have changed over time through improvements in microscopy; explain what this reveals about scientific knowledge",
+            "Consider how classification supports identification and communication in a real scientific or practical context (e.g. biosecurity, medicine)"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I07"
+          ],
+          "endeavour_links": [
+            "AC9S7H02"
+          ],
+          "y_description": "Students can explain why classification is useful for organising and communicating about living things"
+        },
+        {
+          "id": 2,
+          "label": "Taxonomy: major groups and kingdoms",
+          "xmin": "Name the major kingdoms; correctly place 5 familiar organisms into their kingdom with justification using observable features",
+          "width_core": "Sort a set of 12 organisms into kingdoms; identify one organism that is difficult to classify and explain why",
+          "width_enrich_options": [
+            "Name and classify species using Linnaean hierarchy (kingdom \u2192 species); explain what each level represents",
+            "Research a boundary case (e.g. Euglena, virus) \u2014 does it fit the kingdom model? What does this reveal about classification systems?",
+            "Observe and identify similarities and differences of particular features within and between groups of organisms using provided specimens or images"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I04",
+            "AC9S7I05"
+          ],
+          "endeavour_links": [
+            "AC9S7H01"
+          ],
+          "y_description": "Students can place organisms into major taxonomic groups using observable features and justify their classification"
+        },
+        {
+          "id": 3,
+          "label": "Using dichotomous keys",
+          "xmin": "Use a provided dichotomous key to correctly identify at least 5 organisms; explain how each decision point works",
+          "width_core": "Use two different keys for the same organism set; identify where they agree and disagree and explain why",
+          "width_enrich_options": [
+            "Use a provided dichotomous key to identify organisms surveyed on a field trip or from local environment",
+            "Evaluate a flawed dichotomous key \u2014 identify the error, explain its consequence, and propose a correction",
+            "Compare a scientific dichotomous key with a First Nations classification system for the same organisms \u2014 what features does each prioritise?"
+          ],
+          "hinge": true,
+          "hinge_reason": "Using a key requires students to apply binary logic to observable features \u2014 a prerequisite for constructing keys. Misconceptions about feature selection cluster here and propagate directly into Node 4.",
+          "inquiry_links": [
+            "AC9S7I01",
+            "AC9S7I04"
+          ],
+          "endeavour_links": [],
+          "y_description": "Students can use a dichotomous key to identify organisms by applying binary decisions based on observable features"
+        },
+        {
+          "id": 4,
+          "label": "Constructing dichotomous keys",
+          "xmin": "Construct a simple dichotomous key for a set of 6 organisms using observable features; test it with a peer",
+          "width_core": "Construct and refine a key for 10 organisms; document one revision made after peer testing and explain the improvement",
+          "width_enrich_options": [
+            "Create and modify a dichotomous key to classify organisms into groups and subgroups; evaluate its effectiveness",
+            "Design a key for a novel organism set (e.g. everyday objects or invented creatures); reflect on what makes a feature scientifically useful",
+            "Construct a key based on First Nations classification criteria for local organisms and compare its structure with a Linnaean key"
+          ],
+          "hinge": true,
+          "hinge_reason": "Construction requires students to reverse-engineer the logic of classification \u2014 the deepest understanding of the standard. Assessment items directly test this. Errors here are not recoverable without significant reteaching.",
+          "inquiry_links": [
+            "AC9S7I01",
+            "AC9S7I02",
+            "AC9S7I06"
+          ],
+          "endeavour_links": [
+            "AC9S7H01"
+          ],
+          "y_description": "Students can construct a dichotomous key that correctly classifies a set of organisms using observable features"
+        },
+        {
+          "id": 5,
+          "label": "Classification systems change over time",
+          "xmin": "Give one example of a reclassification event; explain what new evidence caused the change",
+          "width_core": "Trace the reclassification of one organism \u2014 what evidence existed before, what changed, and how did the scientific community respond?",
+          "width_enrich_options": [
+            "Examine how biological classification has changed through improvements in microscopy and DNA analysis",
+            "Evaluate: is reclassification a sign that science is unreliable, or a sign that it works? Construct an evidence-based argument",
+            "Investigate how First Nations classification knowledge has contributed to or challenged scientific classification in specific cases"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I07"
+          ],
+          "endeavour_links": [
+            "AC9S7H01",
+            "AC9S7H03"
+          ],
+          "y_description": "Students can explain how classification systems change in response to new evidence and evaluate what this reveals about scientific knowledge"
+        }
+      ]
+    },
+    {
+      "code": "AC9S7U02",
+      "title": "Food Webs and Ecosystems",
+      "description": "Use models, including food webs, to represent matter and energy flow in ecosystems and predict the impact of changing abiotic and biotic factors on populations",
+      "prior_knowledge": "Students can identify producers, consumers and decomposers and construct simple food chains. They have not studied energy flow quantitatively or modelled multi-factor ecosystem changes.",
+      "y_goal": "Students use food web models to represent matter and energy flow, and predict and explain population impacts of changes to abiotic and biotic factors.",
+      "nodes": [
+        {
+          "id": 1,
+          "label": "From food chains to food webs",
+          "xmin": "Construct a food web from a given organism list; identify producers, primary and secondary consumers, and decomposers including microorganisms",
+          "width_core": "Compare a food chain and food web for the same ecosystem \u2014 explain what information is lost in the simpler model",
+          "width_enrich_options": [
+            "Analyse food webs to show feeding relationships including the role of microorganisms in decomposition",
+            "Critique a published food web diagram \u2014 what is it missing, what assumptions does it make?",
+            "Investigate First Nations Australians' food webs in a specific region and compare with a scientific representation of the same ecosystem"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I04"
+          ],
+          "endeavour_links": [
+            "AC9S7H02"
+          ],
+          "y_description": "Students can construct a food web and identify the roles of producers, consumers and decomposers including microorganisms"
+        },
+        {
+          "id": 2,
+          "label": "Matter and energy flow",
+          "xmin": "Explain the direction of energy flow in a food web; state that energy is lost at each trophic level; distinguish energy flow from matter cycling",
+          "width_core": "Use a given energy pyramid to explain why top predators are rare; connect to food web structure",
+          "width_enrich_options": [
+            "Model how energy flows into and out of an ecosystem via food web pathways; represent quantitatively using the 10% rule",
+            "Compare energy flow in two different ecosystems (e.g. rainforest vs desert); explain structural differences",
+            "Analyse a real dataset of biomass at each trophic level; explain the pattern using energy flow principles"
+          ],
+          "hinge": true,
+          "hinge_reason": "Energy flow direction and loss is the conceptual engine behind all population prediction tasks. Students who conflate matter cycling with energy flow make systematic errors in Nodes 3 and 4. Primary misconception gateway for this standard.",
+          "inquiry_links": [
+            "AC9S7I04",
+            "AC9S7I05"
+          ],
+          "endeavour_links": [],
+          "y_description": "Students can explain the direction and loss of energy through trophic levels and distinguish energy flow from matter cycling"
+        },
+        {
+          "id": 3,
+          "label": "Abiotic factors and population effects",
+          "xmin": "Define abiotic factor; give three examples; explain how one abiotic change would affect one population in a given food web",
+          "width_core": "Trace the cascade effect of one abiotic change (e.g. drought, temperature rise) through at least 3 populations with reasoning at each step",
+          "width_enrich_options": [
+            "Examine how seasonal changes or habitat destruction impact abiotic factors and cause population changes",
+            "Compare cascade effects of two different abiotic changes on the same ecosystem \u2014 which is more destabilising and why?",
+            "Investigate First Nations Australians' fire management practices and their effect on abiotic factors and flora/fauna distribution"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I01",
+            "AC9S7I05"
+          ],
+          "endeavour_links": [
+            "AC9S7H03"
+          ],
+          "y_description": "Students can predict and explain how a change to an abiotic factor cascades through populations in a food web"
+        },
+        {
+          "id": 4,
+          "label": "Biotic factors and population effects",
+          "xmin": "Define biotic factor; give three examples; predict the effect of removing one species from a given food web with reasoning",
+          "width_core": "Analyse a trophic cascade case study (e.g. wolf reintroduction in Yellowstone); explain the chain of biotic effects with evidence",
+          "width_enrich_options": [
+            "Predict effects on local ecosystems when pollinators or predators are removed or introduced",
+            "Investigate First Nations Australians' responses to invasive species and their effect on food webs communities depend on",
+            "Evaluate an invasive species scenario \u2014 construct food webs before and after, predict population effects, and propose a management response"
+          ],
+          "hinge": true,
+          "hinge_reason": "Predicting biotic cascade effects requires holding the whole food web in mind simultaneously \u2014 the deepest application of the model. Assessment tasks typically test this directly. Students who haven't secured energy flow (Node 2) make compounding errors here.",
+          "inquiry_links": [
+            "AC9S7I01",
+            "AC9S7I05",
+            "AC9S7I07"
+          ],
+          "endeavour_links": [
+            "AC9S7H03",
+            "AC9S7H04"
+          ],
+          "y_description": "Students can predict and explain how a change to a biotic factor cascades through populations in a food web"
+        },
+        {
+          "id": 5,
+          "label": "Models, limitations and predictions",
+          "xmin": "Identify one limitation of food web models; explain how this affects the reliability of predictions made from them",
+          "width_core": "Compare a simple and complex model of the same ecosystem \u2014 explain what each can and cannot predict",
+          "width_enrich_options": [
+            "Evaluate a real scientific food web model used in a conservation decision \u2014 what did it predict, what did it miss?",
+            "Consider how introduction of a species impacts abiotic and biotic factors beyond immediate food web effects",
+            "Research how First Nations ecological knowledge has improved or challenged scientific food web models in a specific case"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I06",
+            "AC9S7I07"
+          ],
+          "endeavour_links": [
+            "AC9S7H01",
+            "AC9S7H03"
+          ],
+          "y_description": "Students can evaluate the limitations of food web models and explain how these affect the reliability of predictions"
+        }
+      ]
+    },
+    {
+      "code": "AC9S7U03",
+      "title": "Earth-Sun-Moon System",
+      "description": "Model cyclic changes in the relative positions of the Earth, sun and moon and explain how these cycles cause eclipses and influence predictable phenomena on Earth, including seasons and tides",
+      "prior_knowledge": "Students can describe day/night as caused by Earth's rotation and identify moon phases from observation. They have not modelled 3D spatial relationships or explained tides and eclipses mechanistically.",
+      "y_goal": "Students model and explain how cyclic changes in Earth-sun-moon positions cause eclipses, seasons and tides.",
+      "nodes": [
+        {
+          "id": 1,
+          "label": "Earth's rotation, revolution and axial tilt",
+          "xmin": "Distinguish rotation from revolution; link rotation to day/night and revolution to the year; identify that Earth's axis is tilted",
+          "width_core": "Use a physical or digital model to demonstrate both cycles simultaneously; explain what an observer on Earth would experience across a year",
+          "width_enrich_options": [
+            "Use physical models or virtual simulations to explain how Earth's tilt and position relative to the sun causes differences in light intensity",
+            "Investigate First Nations Australians' calendars and how they are used to predict seasonal changes",
+            "Explain why the length of daylight changes across a year at different latitudes using a model"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I04"
+          ],
+          "endeavour_links": [
+            "AC9S7H02"
+          ],
+          "y_description": "Students can distinguish Earth's rotation from revolution and explain how axial tilt relates to observable changes across a year"
+        },
+        {
+          "id": 2,
+          "label": "Moon phases and the lunar cycle",
+          "xmin": "Correctly sequence all 8 moon phases; explain that phases result from the moon's position relative to Earth and sun, not Earth's shadow",
+          "width_core": "Model moon phases using a light source and spheres; predict the phase visible from Earth at a given moon position",
+          "width_enrich_options": [
+            "Analyse a month of real moon phase data \u2014 identify the pattern, calculate the period, identify anomalies",
+            "Research knowledges held by First Nations Australians regarding the phases of the moon and the lunar cycle",
+            "Investigate how lunar calendars from different cultures use moon phases differently and why"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I03",
+            "AC9S7I04",
+            "AC9S7I05"
+          ],
+          "endeavour_links": [
+            "AC9S7H02"
+          ],
+          "y_description": "Students can explain moon phases as a result of the moon's position relative to Earth and sun and sequence them correctly"
+        },
+        {
+          "id": 3,
+          "label": "Eclipses: solar and lunar",
+          "xmin": "Explain the conditions required for a solar and lunar eclipse; correctly distinguish umbra from penumbra; explain why eclipses don't occur every month",
+          "width_core": "Model both eclipse types using a light source; explain the role of the moon's orbital tilt in eclipse frequency",
+          "width_enrich_options": [
+            "Use physical models or virtual simulations to explain cyclic patterns of lunar and solar eclipses",
+            "Research First Nations Australians' oral traditions and cultural recordings of solar and lunar eclipses; compare with contemporary understandings",
+            "Analyse historical eclipse records \u2014 explain why ancient cultures found eclipses unpredictable and what understanding was missing"
+          ],
+          "hinge": true,
+          "hinge_reason": "Eclipse explanation requires 3D spatial reasoning about three bodies simultaneously \u2014 the hardest conceptual step in this standard. Students who rely on 2D diagrams alone consistently misexplain why eclipses are rare. Directly affects assessment performance.",
+          "inquiry_links": [
+            "AC9S7I01",
+            "AC9S7I04"
+          ],
+          "endeavour_links": [
+            "AC9S7H01",
+            "AC9S7H02"
+          ],
+          "y_description": "Students can explain the conditions required for solar and lunar eclipses and why eclipses do not occur every month"
+        },
+        {
+          "id": 4,
+          "label": "Seasons",
+          "xmin": "Explain that seasons are caused by Earth's axial tilt, not distance from the sun; correctly link tilt to solar angle and day length",
+          "width_core": "Use a model to demonstrate why the Southern and Northern hemispheres experience opposite seasons simultaneously",
+          "width_enrich_options": [
+            "Compare seasonal patterns at the equator, temperate zones, and poles \u2014 explain differences using the tilt model",
+            "Investigate First Nations Australians' seasonal calendars (e.g. six-season calendars) and compare with the four-season European model",
+            "Analyse real insolation data for two locations at different latitudes across a year; explain the patterns using the tilt model"
+          ],
+          "hinge": true,
+          "hinge_reason": "The distance misconception (seasons caused by proximity to sun) is extremely persistent and directly tested in assessments. Without resolving it here, students produce confidently wrong answers. High width investment has strong downstream payoff.",
+          "inquiry_links": [
+            "AC9S7I04",
+            "AC9S7I06"
+          ],
+          "endeavour_links": [
+            "AC9S7H02"
+          ],
+          "y_description": "Students can explain seasons as caused by axial tilt and correctly relate tilt to solar angle and day length at different latitudes"
+        },
+        {
+          "id": 5,
+          "label": "Tides",
+          "xmin": "Explain that tides are caused by the moon's gravitational pull; identify spring and neap tides and the moon positions that cause them",
+          "width_core": "Analyse a tide chart for a coastal location \u2014 identify spring and neap cycles and connect them to the lunar calendar",
+          "width_enrich_options": [
+            "Examine the gravitational attraction of the moon and sun on Earth's oceans; explain how relative positions result in tidal variations",
+            "Research how First Nations Australians used tidal patterns and connection between lunar cycle and ocean tides for resource management",
+            "Investigate how tidal patterns differ between locations and explain using the moon-sun-Earth model"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I05",
+            "AC9S7I07"
+          ],
+          "endeavour_links": [
+            "AC9S7H02",
+            "AC9S7H04"
+          ],
+          "y_description": "Students can explain tides as caused by the moon's gravitational pull and distinguish spring from neap tides by moon position"
+        }
+      ]
+    },
+    {
+      "code": "AC9S7U04",
+      "title": "Forces and Motion",
+      "description": "Investigate and represent balanced and unbalanced forces, including gravitational force, acting on objects, and relate changes in an object's motion to its mass and the magnitude and direction of forces acting on it",
+      "prior_knowledge": "Students can identify pushes and pulls as forces and know that gravity pulls objects toward Earth. They have not represented forces as vectors, analysed balanced/unbalanced states, or applied F=ma reasoning.",
+      "y_goal": "Students represent and explain how balanced and unbalanced forces, including gravity, relate to changes in an object's motion in terms of mass, magnitude and direction.",
+      "nodes": [
+        {
+          "id": 1,
+          "label": "Forces as vectors: magnitude and direction",
+          "xmin": "Represent at least two forces on an object using arrows with correct relative size and direction; name the forces",
+          "width_core": "Draw force diagrams for 4 different scenarios (stationary, accelerating, decelerating, falling); justify arrow choices",
+          "width_enrich_options": [
+            "Measure the magnitude of forces using a force meter; represent magnitude and direction using force arrow diagrams",
+            "Analyse a real photograph of an object in motion \u2014 identify all forces acting and represent them in a diagram",
+            "Investigate forces acting on boomerangs and how First Peoples of Australia designed an aerofoil profile \u2014 represent forces involved"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I03",
+            "AC9S7I04"
+          ],
+          "endeavour_links": [
+            "AC9S7H02"
+          ],
+          "y_description": "Students can represent forces on an object as vectors showing correct magnitude and direction and name the forces"
+        },
+        {
+          "id": 2,
+          "label": "Balanced forces and equilibrium",
+          "xmin": "Define balanced forces; correctly identify whether forces are balanced in a given diagram; state that balanced forces mean no change in motion",
+          "width_core": "Analyse 6 scenarios \u2014 classify each as balanced or unbalanced; predict the motion state for each with reasoning",
+          "width_enrich_options": [
+            "Analyse the effect of balanced and unbalanced forces on an object's motion including starting, stopping and changing direction",
+            "Investigate a real engineering structure (e.g. bridge, building) \u2014 identify how balanced forces are maintained",
+            "Investigate how simple machines such as levers and pulleys change the magnitude of force needed \u2014 represent forces involved"
+          ],
+          "hinge": true,
+          "hinge_reason": "The misconception that balanced forces mean no forces (rather than equal and opposite) is extremely common and directly undermines Newton's First Law. This error propagates into every subsequent node.",
+          "inquiry_links": [
+            "AC9S7I01",
+            "AC9S7I05",
+            "AC9S7I06"
+          ],
+          "endeavour_links": [
+            "AC9S7H03"
+          ],
+          "y_description": "Students can identify whether forces on an object are balanced or unbalanced and predict the resulting motion state"
+        },
+        {
+          "id": 3,
+          "label": "Unbalanced forces and changes in motion",
+          "xmin": "Explain that unbalanced forces cause a change in motion (speed or direction); give two examples with force diagrams",
+          "width_core": "Analyse motion scenarios \u2014 identify the unbalanced force, predict the change in motion, draw the force diagram",
+          "width_enrich_options": [
+            "Investigate the effects of applying different forces to familiar objects of the same and different mass",
+            "Design a fair test to investigate how the magnitude of an unbalanced force affects the rate of motion change",
+            "Investigate forces through application of traditional tools such as spearthrowers used by First Peoples of Australia \u2014 analyse the forces involved"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I01",
+            "AC9S7I02",
+            "AC9S7I03"
+          ],
+          "endeavour_links": [
+            "AC9S7H02"
+          ],
+          "y_description": "Students can explain that unbalanced forces cause a change in motion and represent this with force diagrams"
+        },
+        {
+          "id": 4,
+          "label": "Gravitational force and mass",
+          "xmin": "Distinguish mass from weight; explain gravitational force as dependent on mass; calculate weight given mass and gravitational field strength",
+          "width_core": "Compare gravitational force on the same object on Earth, the Moon, and Mars \u2014 explain differences using gravitational field strength",
+          "width_enrich_options": [
+            "Investigate how Earth's gravitational force pulls objects to the centre of Earth and how its magnitude relates to mass",
+            "Examine how gravity affects objects in space including moons, planets, stars and galaxies",
+            "Evaluate a common misconception (e.g. 'objects fall at different rates based on mass') using experimental evidence; construct a refutation"
+          ],
+          "hinge": true,
+          "hinge_reason": "Mass/weight confusion is the most persistent misconception in this standard and is directly assessed. Students who conflate the two make systematic errors in force calculations and cannot correctly explain gravitational scenarios.",
+          "inquiry_links": [
+            "AC9S7I03",
+            "AC9S7I06",
+            "AC9S7I07"
+          ],
+          "endeavour_links": [
+            "AC9S7H01"
+          ],
+          "y_description": "Students can distinguish mass from weight, explain gravitational force as dependent on mass, and calculate weight from mass"
+        },
+        {
+          "id": 5,
+          "label": "Relating force, mass and motion change",
+          "xmin": "State the relationship between force, mass and acceleration qualitatively; predict whether a heavier or lighter object will accelerate more under the same force",
+          "width_core": "Analyse data from a force investigation \u2014 identify the pattern between force, mass and acceleration; represent graphically",
+          "width_enrich_options": [
+            "Evaluate a real-world application (e.g. vehicle safety, rocket launch) \u2014 explain how engineers manipulate force and mass",
+            "Investigate how simple machines change force magnitude for a task; analyse the trade-offs involved",
+            "Analyse the forces acting on a boomerang in flight \u2014 explain how design variables affect the motion outcome"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I04",
+            "AC9S7I05",
+            "AC9S7I07"
+          ],
+          "endeavour_links": [
+            "AC9S7H03"
+          ],
+          "y_description": "Students can describe the qualitative relationship between force, mass and acceleration and interpret data from force investigations"
+        }
+      ]
+    },
+    {
+      "code": "AC9S7U05",
+      "title": "Particle Theory and Properties",
+      "description": "Use particle theory to describe the arrangement of particles in a substance, including the motion of and attraction between particles, and relate this to the properties of the substance",
+      "prior_knowledge": "Students know that matter exists as solids, liquids and gases and can describe observable properties. They have not used particle theory to explain properties or modelled particle behaviour at a submicroscopic level.",
+      "y_goal": "Students use particle theory to explain and predict the physical properties of substances in terms of particle arrangement, motion and attraction.",
+      "nodes": [
+        {
+          "id": 1,
+          "label": "Introducing the particle model",
+          "xmin": "State the key ideas of particle theory (particles, spacing, motion, attraction); correctly match particle diagrams to solid, liquid and gas",
+          "width_core": "Explain three observable properties of a substance using particle theory language; draw and annotate particle diagrams",
+          "width_enrich_options": [
+            "Use and construct models, diagrams or virtual simulations to represent particle arrangement in different states",
+            "Evaluate the particle model as a model \u2014 what does it explain well, what does it not explain, and what evidence supports it?",
+            "Compare the particle model with how materials properties are described in Design and Technologies contexts"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I04"
+          ],
+          "endeavour_links": [
+            "AC9S7H01"
+          ],
+          "y_description": "Students can match particle diagrams to states of matter and state the key ideas of particle theory"
+        },
+        {
+          "id": 2,
+          "label": "Particle arrangement, motion and attraction in each state",
+          "xmin": "Describe particle arrangement, motion and attraction for each state; explain why solids hold shape and gases fill containers",
+          "width_core": "Compare particle diagrams for 6 substances \u2014 rank by particle spacing and predict relative density; check against data",
+          "width_enrich_options": [
+            "Relate motion and energy of particles to distances between particles in different states of the same substance",
+            "Compare attractive forces in solid, liquid and gaseous states and relate to relative position and movement of particles",
+            "Investigate an anomalous case (e.g. ice floating on water) \u2014 explain using particle theory and evaluate whether the basic model needs refinement"
+          ],
+          "hinge": true,
+          "hinge_reason": "Particle arrangement is the foundation of all property explanations. Students who treat particle diagrams as decorative rather than explanatory cannot use the model to reason. Primary misconception gateway \u2014 errors propagate into every subsequent node and are directly assessed.",
+          "inquiry_links": [
+            "AC9S7I04",
+            "AC9S7I05"
+          ],
+          "endeavour_links": [],
+          "y_description": "Students can describe particle arrangement, motion and attraction for each state and explain observable properties using this model"
+        },
+        {
+          "id": 3,
+          "label": "Explaining physical properties using particle theory",
+          "xmin": "Use particle theory to explain at least two physical properties (e.g. compressibility, viscosity, density) of a given substance",
+          "width_core": "Compare the physical properties of three substances using particle theory; explain why properties differ in terms of arrangement, motion and attraction",
+          "width_enrich_options": [
+            "Investigate properties of materials such as density, melting point and compressibility and explain in terms of particle arrangement",
+            "Explain the process of diffusion in a liquid and a gas in terms of particle motion",
+            "Predict the properties of an unfamiliar substance given only its particle diagram; justify predictions and test against published data"
+          ],
+          "hinge": true,
+          "hinge_reason": "This is the key application node \u2014 using the model to explain rather than just describe. Assessment tasks require explanatory use of particle theory. Students who can only recall diagrams without explanation cannot access higher marks.",
+          "inquiry_links": [
+            "AC9S7I01",
+            "AC9S7I05",
+            "AC9S7I07"
+          ],
+          "endeavour_links": [],
+          "y_description": "Students can use particle theory to explain physical properties of substances including compressibility, viscosity and density"
+        },
+        {
+          "id": 4,
+          "label": "Changes of state and energy",
+          "xmin": "Explain melting, freezing, evaporation and condensation using particle theory; correctly identify energy input/output for each change",
+          "width_core": "Analyse a heating/cooling curve \u2014 identify each state change, explain plateau regions using particle theory, connect to energy changes",
+          "width_enrich_options": [
+            "Examine how changing motion and energy of particles is affected by heat energy absorbed or released",
+            "Model changes in particle arrangement as substances change state using diagrams or virtual simulations",
+            "Investigate sublimation or a non-standard state change \u2014 explain using particle theory and evaluate whether the basic model is sufficient"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I03",
+            "AC9S7I04",
+            "AC9S7I05"
+          ],
+          "endeavour_links": [],
+          "y_description": "Students can explain changes of state using particle theory and correctly identify energy input or output for each change"
+        },
+        {
+          "id": 5,
+          "label": "Particle theory as a model: scope and limits",
+          "xmin": "Identify one phenomenon particle theory explains well and one it does not explain; give a reason for each",
+          "width_core": "Compare particle theory with an alternative model \u2014 explain what each is designed to explain and why scientists use multiple models",
+          "width_enrich_options": [
+            "Research a historical development of particle theory \u2014 how did evidence change the model over time?",
+            "Analyse how characteristics and properties of materials are used in Design and Technologies to create solutions \u2014 connect to particle-level explanations",
+            "Evaluate published claims about a material's properties using particle theory as a critical lens"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I06",
+            "AC9S7I07"
+          ],
+          "endeavour_links": [
+            "AC9S7H01",
+            "AC9S7H02"
+          ],
+          "y_description": "Students can identify the scope and limitations of the particle model and explain what evidence supports it"
+        }
+      ]
+    },
+    {
+      "code": "AC9S7U06",
+      "title": "Pure Substances and Mixtures",
+      "description": "Use a particle model to describe differences between pure substances and mixtures and apply understanding of properties of substances to separate mixtures",
+      "prior_knowledge": "Students can classify materials as solids, liquids or gases and have an introductory particle model from AC9S7U05. They have not formally distinguished pure substances from mixtures at the particle level or applied separation techniques systematically.",
+      "y_goal": "Students use a particle model to explain the difference between pure substances and mixtures, and select and apply appropriate separation techniques based on properties of substances.",
+      "nodes": [
+        {
+          "id": 1,
+          "label": "Pure substances vs mixtures at the particle level",
+          "xmin": "Distinguish pure substance from mixture using particle diagrams; classify 5 familiar materials correctly with justification",
+          "width_core": "Draw particle diagrams for a pure substance, a homogeneous mixture and a heterogeneous mixture; explain the key differences",
+          "width_enrich_options": [
+            "Use representations of particles to show the difference between samples of pure substances and mixtures; identify examples of each in everyday contexts",
+            "Examine different solutions and identify the solvent and solute; represent at the particle level",
+            "Investigate a borderline case (e.g. alloy, saltwater at different concentrations) \u2014 is it pure or a mixture? What does this reveal about the definition?"
+          ],
+          "hinge": true,
+          "hinge_reason": "The pure/mixture distinction at the particle level is prerequisite for all separation technique selection. Students who cannot make this distinction select inappropriate techniques and cannot explain their choices \u2014 the primary assessment task.",
+          "inquiry_links": [
+            "AC9S7I04"
+          ],
+          "endeavour_links": [],
+          "y_description": "Students can distinguish pure substances from mixtures using particle diagrams and classify familiar materials correctly"
+        },
+        {
+          "id": 2,
+          "label": "Properties as the basis for separation",
+          "xmin": "State that separation techniques exploit differences in physical properties; match at least three property differences to a separation technique",
+          "width_core": "Analyse a mixture \u2014 identify relevant property differences and justify which technique is most appropriate, including why others would not work",
+          "width_enrich_options": [
+            "Analyse how physical properties of substances in mixtures (particle size, density, volatility) determine the separation technique used",
+            "Explore and compare separation methods used in a variety of situations such as in the home, recycling industries and water purification",
+            "Evaluate a separation scenario with multiple possible techniques \u2014 rank by efficiency, cost and practicality"
+          ],
+          "hinge": true,
+          "hinge_reason": "Understanding that techniques exploit property differences (not just 'removing things') is the conceptual key. Without this, students apply techniques by rote and cannot explain or adapt when scenarios change. Directly assessed.",
+          "inquiry_links": [
+            "AC9S7I01",
+            "AC9S7I05"
+          ],
+          "endeavour_links": [],
+          "y_description": "Students can explain that separation techniques exploit differences in physical properties and match property differences to techniques"
+        },
+        {
+          "id": 3,
+          "label": "Filtration and evaporation",
+          "xmin": "Correctly perform or describe filtration and evaporation; identify a mixture each technique is appropriate for and explain why using property differences",
+          "width_core": "Design a procedure to separate a given mixture using filtration and/or evaporation; predict and explain the result at the particle level",
+          "width_enrich_options": [
+            "Investigate and use filtration and evaporation in a range of practical contexts; evaluate effectiveness",
+            "Investigate separation techniques used by First Nations Australians such as hand-picking, sieving, winnowing and filtering \u2014 explain the property differences each exploits",
+            "Investigate the effect of a variable (e.g. filter paper grade, temperature) on separation efficiency; analyse results using particle theory"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I02",
+            "AC9S7I03",
+            "AC9S7I06"
+          ],
+          "endeavour_links": [
+            "AC9S7H02"
+          ],
+          "y_description": "Students can perform or describe filtration and evaporation and justify their use for appropriate mixtures"
+        },
+        {
+          "id": 4,
+          "label": "Distillation and chromatography",
+          "xmin": "Describe the principle of distillation and chromatography; identify a mixture each is appropriate for and explain why",
+          "width_core": "Compare distillation and evaporation \u2014 explain when each is appropriate and why, using particle theory and property differences",
+          "width_enrich_options": [
+            "Investigate crystallisation, chromatography and distillation; explain the property differences each exploits",
+            "Investigate separation techniques used by First Nations Australians such as yandying, cold-pressing and steam distilling \u2014 connect to property principles",
+            "Analyse a chromatography result \u2014 calculate Rf values, identify components, evaluate what the result reveals about mixture composition"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I02",
+            "AC9S7I03",
+            "AC9S7I04",
+            "AC9S7I05"
+          ],
+          "endeavour_links": [
+            "AC9S7H02"
+          ],
+          "y_description": "Students can describe the principles of distillation and chromatography and identify mixtures each technique is appropriate for"
+        },
+        {
+          "id": 5,
+          "label": "Selecting and justifying separation techniques",
+          "xmin": "Given an unfamiliar mixture, select an appropriate technique and justify the choice using property differences",
+          "width_core": "Design a multi-step separation procedure for a mixture with three components; justify each step and predict the outcome",
+          "width_enrich_options": [
+            "Evaluate a real-world separation process (e.g. water purification, mining, food processing) \u2014 identify techniques used and property differences exploited",
+            "Compare industrial and First Nations separation techniques for the same type of mixture \u2014 analyse efficiency, sustainability and cultural significance",
+            "Design and evaluate an original separation procedure for a novel mixture; assess against criteria of efficiency, cost and practicality"
+          ],
+          "hinge": false,
+          "hinge_reason": null,
+          "inquiry_links": [
+            "AC9S7I01",
+            "AC9S7I02",
+            "AC9S7I06",
+            "AC9S7I07"
+          ],
+          "endeavour_links": [
+            "AC9S7H03",
+            "AC9S7H04"
+          ],
+          "y_description": "Students can select and justify an appropriate separation technique for an unfamiliar mixture using property differences"
+        }
+      ]
+    }
+  ]
+}
