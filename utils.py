@@ -248,3 +248,51 @@ def generate_pdf(selected_codes, num_lessons, assessment_type, assessment_summar
     doc.build(story)
     buf.seek(0)
     return buf
+
+# ── Prior knowledge chain ──────────────────────────────────────────────────────
+import glob as _glob
+
+@st.cache_data
+def load_y_goals_map():
+    path = os.path.join("data", "science_y_goals_map.json")
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def _search_tree(node, target, path):
+    current = path + [node["code"]]
+    if node["code"] == target:
+        return current[:-1]
+    for child in node.get("children", []):
+        result = _search_tree(child, target, current)
+        if result is not None:
+            return result
+    return None
+
+def get_prior_chain(code):
+    """Return ordered list of prior standards from Foundation up to (not including) this code."""
+    y_goals_map = load_y_goals_map()
+    threads = y_goals_map.get("progression_threads", {})
+    ancestors = []
+    for strand in threads.get("strands", {}).values():
+        for root in strand["tree"]:
+            result = _search_tree(root, code, [])
+            if result is not None:
+                ancestors = result
+                break
+        if ancestors:
+            break
+
+    chain = []
+    for ancestor_code in ancestors:
+        for yl, yl_data in y_goals_map.get("year_levels", {}).items():
+            for std in yl_data.get("standards", []):
+                if std["code"] == ancestor_code:
+                    chain.append({
+                        "code": ancestor_code,
+                        "year_level": yl,
+                        "title": std["title"],
+                        "y_goal": std["y_goal"]
+                    })
+    return chain

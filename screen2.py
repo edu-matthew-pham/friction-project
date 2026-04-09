@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from utils import standards_map, compression_warnings, node_lesson_budget
+from utils import standards_map, compression_warnings, node_lesson_budget, get_prior_chain
 
 def show():
     selected_codes = st.session_state.selected_codes
@@ -50,6 +50,19 @@ def show():
         }
     )
     st.caption("Est. Lessons are indicative only. Hinge nodes are allocated slightly more time by default.")
+    st.divider()
+
+    # Prior knowledge chain
+    st.subheader("Prior Knowledge Pathway")
+    st.caption("Conceptual pathway leading to this unit — from Foundation to Year 7.")
+    for code in selected_codes:
+        chain = get_prior_chain(code)
+        if chain:
+            st.markdown(f"**{code} prior pathway:**")
+            for item in chain:
+                st.caption(f"Year {item['year_level']} · {item['code']} · {item['title']}: {item['y_goal']}")
+        else:
+            st.caption(f"{code}: no prior pathway found in progression map.")
     st.divider()
 
     # Full node detail
