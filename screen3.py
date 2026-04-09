@@ -151,6 +151,17 @@ Design a short pre-unit diagnostic task (10–15 minutes) that:
 - Generates actionable information: teacher can identify students who need more consolidation at early nodes
 - Is not a test — frame it as a curiosity or thinking task"""
 
+    # Build Xmin per node for Y7 standards
+    xmin_lines = []
+    for code in selected_codes:
+        if code not in standards_map:
+            continue
+        std = standards_map[code]
+        xmin_lines.append(f"{code} — {std['title']}:")
+        for node in std["nodes"]:
+            xmin_lines.append(f"  Node {node['id']}: {node['xmin']}")
+    xmin_text = "\n".join(xmin_lines) if xmin_lines else "None defined"
+
     return f"""You are helping a Year 7 Science teacher design a pre-unit diagnostic assessment.
 
 CONTEXT
@@ -163,14 +174,19 @@ PURPOSE
 ──────────────────────────────────
 This diagnostic is completed BEFORE teaching begins. It informs:
 - Where students actually are relative to assumed prior knowledge
+- Whether any students have partial knowledge of Y7 content already
 - Which early nodes may need more consolidation time
 - Initial friction/pace estimate for the class
 
-PRIOR KNOWLEDGE PATHWAY (what this diagnostic should probe)
+PRIOR KNOWLEDGE PATHWAY (probe these — what students should already know)
 ──────────────────────────────────
 {ctx['prior_text']}
 
-Y-GOALS FOR THIS UNIT (do NOT assess these — they are the teaching destination)
+Y7 NODE MINIMUMS (Xmin — optionally probe these to surface partial Y7 knowledge)
+──────────────────────────────────
+{xmin_text}
+
+Y-GOALS FOR THIS UNIT (teaching destination — do not fully assess these)
 ──────────────────────────────────
 {ctx['y_goal_text']}
 

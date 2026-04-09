@@ -93,9 +93,27 @@ def show():
         with st.expander(f"Prior pathway for {code}", expanded=False):
             for item in chain:
                 key = f"diag_{code}_{item['code']}"
-                current = st.session_state.diagnostic_ratings.get(key, "🟡 Partial")
+                current = st.session_state.diagnostic_ratings.get(key, "🟢 Secure")
                 rating = st.radio(
                     f"**Year {item['year_level']} · {item['code']}** — {item['y_goal']}",
+                    traffic_options,
+                    index=traffic_options.index(current),
+                    horizontal=True,
+                    key=f"radio_{key}"
+                )
+                st.session_state.diagnostic_ratings[key] = rating
+
+    # Y7 node-level ratings
+    st.caption("Optionally rate Y7 nodes if students showed partial knowledge in the diagnostic.")
+    for code in selected_codes:
+        if code not in standards_map:
+            continue
+        with st.expander(f"Y7 node ratings for {code} (optional)", expanded=False):
+            for node in standards_map[code]["nodes"]:
+                key = f"diag_y7_{code}_node_{node['id']}"
+                current = st.session_state.diagnostic_ratings.get(key, "🔴 Gap")
+                rating = st.radio(
+                    f"Node {node['id']}: {node['label']}",
                     traffic_options,
                     index=traffic_options.index(current),
                     horizontal=True,
@@ -251,6 +269,11 @@ def show():
                 if diagnostic_notes.strip():
                     prior_chain_text += f"\nDiagnostic notes: {diagnostic_notes}"
 
+                # Add Y7 node diagnostic rating for this specific node
+                node_diag_key = f"diag_y7_{code}_node_{node['id']}"
+                node_diag_rating = diagnostic_ratings.get(node_diag_key, "")
+                node_diag_text = f"\nDiagnostic rating for this node: {node_diag_rating}" if node_diag_rating else ""
+
                 # Build friction-aware success criteria
                 sc_xmin = node.get("success_criteria", [])
                 sc_lines = ["Xmin (target for all students):"]
@@ -276,7 +299,7 @@ Lessons available: {override_lessons}
 
 CONCEPTUAL POSITION (Y) — overarching learning intention for this node
 ──────────────────────────────────
-{node['y_description']}
+{node['y_description']}{node_diag_text}
 
 PRIOR KNOWLEDGE (what students already know coming into this unit)
 ──────────────────────────────────
