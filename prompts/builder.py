@@ -178,22 +178,22 @@ def build_lesson_prompt(code, node, friction, assessment_type, override_lessons,
     sc_xmin = node.get("success_criteria", [])
     sc_lines = ["Xmin (target for all students):"]
     sc_lines += ["- " + sc for sc in sc_xmin]
-    if friction in ["Typical", "Low"] and node.get("width_core"):
+    if friction in ["Steady", "Advancing"] and node.get("width_core"):
         sc_lines += ["", "X+ (target for this class — core width):"]
         sc_lines += ["- Demonstrate: " + node["width_core"]]
-    if friction == "Low" and enrich_opts:
+    if friction == "Advancing" and enrich_opts:
         sc_lines += ["", "X++ (target for this class — enrichment):"]
         sc_lines += ["- Demonstrate: " + enrich_opts[0]]
     sc_text = "\n".join(sc_lines)
 
-    core_task = node.get("width_core", "") if friction != "Medium–High" else node.get("xmin", "")
+    core_task = node.get("width_core", "") if friction != "Consolidating" else node.get("xmin", "")
     enrich_text = "\n".join("- " + o for o in enrich_opts) if enrich_opts else "Not applicable at this friction level."
     hinge_note = f"\nIMPORTANT — This is a hinge concept: {node['hinge_reason']}" if node.get("hinge") and node.get("hinge_reason") else ""
 
     friction_guidance = {
-        "Low": "Students are likely to move quickly. Prioritise enrichment options to deepen construction. Avoid racing ahead to the next waypoint.",
-        "Typical": "Maintain minimum width at this waypoint. Use the core width task. Add enrichment only if time allows.",
-        "Medium–High": "Stay near Xmin. Use targeted supports — worked examples, misconception repair, structured sentence starters. Do not widen prematurely."
+        "Advancing": "Students are likely to move quickly. Prioritise enrichment options to deepen construction. Avoid racing ahead to the next waypoint.",
+        "Steady": "Maintain minimum width at this waypoint. Use the core width task. Add enrichment only if time allows.",
+        "Consolidating": "Stay near Xmin. Use targeted supports — worked examples, misconception repair, structured sentence starters. Do not widen prematurely."
     }.get(friction, "Use the core width task.")
 
     assessment_items_text = "\n".join(

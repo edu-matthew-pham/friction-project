@@ -29,29 +29,29 @@ def science_band(score):
     else: return 1
 
 def classify_friction(mean_rfi):
-    if mean_rfi <= -0.5: return "Low"
-    elif mean_rfi < 0.5: return "Typical"
-    else: return "Medium–High"
+    if mean_rfi <= -0.5: return "Advancing"
+    elif mean_rfi < 0.5: return "Steady"
+    else: return "Consolidating"
 
 def width_emphasis(friction, node):
     opts = node.get("width_enrich_options", [])
-    if friction == "Low":
+    if friction == "Advancing":
         return node["width_core"], opts
-    elif friction == "Medium–High":
+    elif friction == "Steady":
         return node["width_core"], []
     else:
         return node["width_core"], opts[:1] if opts else []
 
 def width_level_label(friction, is_hinge):
-    if friction == "Low":
+    if friction == "Advancing":
         return "Core + Enrich" if is_hinge else "Core"
-    elif friction == "Medium–High":
+    elif friction == "Consolidating":
         return "Core" if is_hinge else "Xmin"
     else:
         return "Core + Enrich" if is_hinge else "Core"
 
 def friction_label_short(f):
-    return {"Low": "low", "Typical": "typical", "Medium–High": "medium-high"}[f]
+    return {"Advancing": "advancing", "Steady": "steady", "Consolidating": "consolidating"}[f]
 
 def node_lesson_budget(base, is_hinge):
     return max(1, round(base * (1.3 if is_hinge else 1.0)))
@@ -77,7 +77,7 @@ SESSION_DEFAULTS = {
     "num_lessons": 12,
     "assessment_type": "Test",
     "assessments": [],
-    "friction_label": "Typical",
+    "friction_label": "Steady",
     "mean_rfi": None,
     "assessment_mode": "Draft new",
     "existing_task": "",

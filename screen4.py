@@ -16,7 +16,7 @@ def show():
     st.subheader("Class Planning")
 
     # ── Friction setup ────────────────────────────────────────────────────────
-    with st.expander("Class Friction Setup", expanded=True):
+    with st.expander("Pace Profile Setup", expanded=True):
         col1, col2 = st.columns(2)
 
         with col1:
@@ -37,7 +37,7 @@ def show():
                     c1, c2, c3 = st.columns(3)
                     c1.metric("Students", len(df))
                     c2.metric("Mean RFI", f"{mean_rfi:.2f}")
-                    c3.metric("Calculated Friction", auto_label)
+                    c3.metric("Calculated Pace Profile", auto_label)
 
                     with st.expander("View class data"):
                         st.dataframe(
@@ -46,9 +46,9 @@ def show():
                         )
 
         with col2:
-            friction_options = ["Low", "Typical", "Medium–High"]
+            friction_options = ["Advancing", "Steady", "Consolidating"]
             st.session_state.friction_label = st.radio(
-                "Friction level (override if needed)",
+                "Pace profile (override if needed)",
                 friction_options,
                 index=friction_options.index(st.session_state.friction_label),
                 captions=[
@@ -68,9 +68,9 @@ def show():
     prior_factor = {"Well below": 1.4, "Below": 1.2, "At": 1.0, "Above": 0.8}[prior]
 
     friction_guidance = {
-        "Low": "Low friction: Keep early waypoints near ±Xmin. Widen at hinge waypoints. All enrichment options available.",
-        "Typical": "Typical friction: Minimum width at most waypoints. Selective enrichment at hinge waypoints only.",
-        "Medium–High": "Medium–High friction: Stay near ±Xmin throughout. Targeted supports. No enrichment until core is secure."
+        "Advancing": "Faster pace: Keep early waypoints near ±Xmin. Widen at hinge waypoints. All enrichment options available.",
+        "Steady": "Typical pace: Minimum width at most waypoints. Selective enrichment at hinge waypoints only.",
+        "Consolidating": "Slower pace: Stay near ±Xmin throughout. Targeted supports. No enrichment until core is secure."
     }
     st.info(friction_guidance[friction])
     if st.session_state.mean_rfi is not None:
@@ -229,7 +229,7 @@ def show():
                     for opt in enrich_opts:
                         st.markdown(f"- {opt}")
                 else:
-                    st.caption("Not recommended at this friction level — consolidate core width first.")
+                    st.caption("Not recommended at this pace profile — consolidate core width first.")
 
             if is_hinge and node.get("hinge_reason"):
                 st.caption(f"⚑ {node['hinge_reason']}")
