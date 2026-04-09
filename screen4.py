@@ -187,10 +187,12 @@ def show():
                     "Medium–High": "Stay near Xmin. Use targeted supports — worked examples, misconception repair, structured sentence starters. Do not widen prematurely."
                 }.get(friction, "Use the core width task.")
 
-                assessment_context = {
-                    "Test": "Lessons should build toward a written test. Prioritise clarity of explanation, correct use of terminology, and structured responses.",
-                    "Investigation": "Lessons should build toward a practical investigation. Prioritise procedural understanding, observation skills, and evidence-based reasoning."
-                }.get(assessment_type, "")
+                # Build assessment context from all items
+                assessments = st.session_state.get("assessments", [])
+                assessment_items_text = "\n".join(
+                    f"- {a['label']}: {a['type']} · {a['timing']}"
+                    for a in assessments
+                ) if assessments else f"- {assessment_type}"
 
                 assessment_summary = st.session_state.get("assessment_summary", "")
                 task_context = (
@@ -258,7 +260,8 @@ FRICTION GUIDANCE
 
 ASSESSMENT CONTEXT
 ──────────────────────────────────
-{assessment_context}{task_context}
+Assessment items for this unit:
+{assessment_items_text}{task_context}
 
 YOUR TASK
 ──────────────────────────────────
