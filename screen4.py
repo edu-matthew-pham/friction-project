@@ -67,8 +67,8 @@ def show():
     prior_factor = {"Well below": 1.4, "Below": 1.2, "At": 1.0, "Above": 0.8}[prior]
 
     friction_guidance = {
-        "Low": "Low friction: Keep early nodes near ±Xmin. Widen at hinge nodes. All enrichment options available.",
-        "Typical": "Typical friction: Minimum width at most nodes. Selective enrichment at hinge nodes only.",
+        "Low": "Low friction: Keep early waypoints near ±Xmin. Widen at hinge waypoints. All enrichment options available.",
+        "Typical": "Typical friction: Minimum width at most waypoints. Selective enrichment at hinge waypoints only.",
         "Medium–High": "Medium–High friction: Stay near ±Xmin throughout. Targeted supports. No enrichment until core is secure."
     }
     st.info(friction_guidance[friction])
@@ -79,7 +79,7 @@ def show():
 
     # ── Diagnostic results ────────────────────────────────────────────────────
     st.subheader("Diagnostic Results")
-    st.caption("Rate each prior knowledge standard based on diagnostic task results. This informs early node pacing.")
+    st.caption("Rate each prior knowledge standard based on diagnostic task results. This informs early waypoint pacing.")
 
     if "diagnostic_ratings" not in st.session_state:
         st.session_state.diagnostic_ratings = {}
@@ -91,6 +91,14 @@ def show():
         if not chain:
             continue
         with st.expander(f"Prior pathway for {code}", expanded=False):
+            # Bulk toggle
+            prior_keys = [f"diag_{code}_{item['code']}" for item in chain]
+            cols = st.columns(3)
+            for ci, label in enumerate(traffic_options):
+                if cols[ci].button(f"All {label}", key=f"bulk_prior_{code}_{ci}"):
+                    for k in prior_keys:
+                        st.session_state.diagnostic_ratings[k] = label
+                    st.rerun()
             for item in chain:
                 key = f"diag_{code}_{item['code']}"
                 current = st.session_state.diagnostic_ratings.get(key, "🟢 Secure")
@@ -103,17 +111,25 @@ def show():
                 )
                 st.session_state.diagnostic_ratings[key] = rating
 
-    # Y7 node-level ratings
-    st.caption("Optionally rate Y7 nodes if students showed partial knowledge in the diagnostic.")
+    # Y7 waypoint-level ratings
+    st.caption("Update waypoint progress as the unit unfolds — reflects current class understanding, not just the initial diagnostic.")
     for code in selected_codes:
         if code not in standards_map:
             continue
-        with st.expander(f"Y7 node ratings for {code} (optional)", expanded=False):
+        with st.expander(f"Y7 Waypoint Progress — {code}", expanded=False):
+            # Bulk toggle
+            y7_keys = [f"diag_y7_{code}_node_{node['id']}" for node in standards_map[code]["nodes"]]
+            cols = st.columns(3)
+            for ci, label in enumerate(traffic_options):
+                if cols[ci].button(f"All {label}", key=f"bulk_y7_{code}_{ci}"):
+                    for k in y7_keys:
+                        st.session_state.diagnostic_ratings[k] = label
+                    st.rerun()
             for node in standards_map[code]["nodes"]:
                 key = f"diag_y7_{code}_node_{node['id']}"
                 current = st.session_state.diagnostic_ratings.get(key, "🔴 Gap")
                 rating = st.radio(
-                    f"Node {node['id']}: {node['label']}",
+                    f"Waypoint {node['id']}: {node['label']}",
                     traffic_options,
                     index=traffic_options.index(current),
                     horizontal=True,
@@ -145,7 +161,7 @@ def show():
             n_lessons = node_lesson_budget(base_lessons * prior_factor, is_hinge)
             summary_rows.append({
                 "Standard": code,
-                "Node": str(node["id"]) + ". " + node["label"],
+                "Waypoint": str(node["id"]) + ". " + node["label"],
                 "Y Position": node.get("y_description") or "",
                 "Hinge": "Yes" if is_hinge else "",
                 "Hinge Reason": node.get("hinge_reason") or "",
@@ -159,7 +175,7 @@ def show():
         hide_index=True,
         column_config={
             "Standard": st.column_config.TextColumn(width="small"),
-            "Node": st.column_config.TextColumn(width="medium"),
+            "Waypoint": st.column_config.TextColumn(width="medium"),
             "Y Position": st.column_config.TextColumn(width="large"),
             "Hinge": st.column_config.TextColumn(width="small"),
             "Hinge Reason": st.column_config.TextColumn(width="large"),
@@ -167,10 +183,10 @@ def show():
             "Est. Lessons": st.column_config.NumberColumn(width="small"),
         }
     )
-    st.caption("See node detail below for tasks at each width level.")
+    st.caption("See waypoint detail below for tasks at each width level.")
     st.divider()
 
-    # ── Node cards with lesson prompt generators ──────────────────────────────
+    # ── Waypoint cards with lesson prompt generators ──────────────────────────────
     for code in selected_codes:
         if code not in standards_map:
             continue
@@ -187,7 +203,7 @@ def show():
 
             hinge_prefix = "⚑ HINGE — " if is_hinge else ""
             lessons_suffix = "s" if n_lessons != 1 else ""
-            label = f"{hinge_prefix}Node {node['id']}: {node['label']}  ·  ~{n_lessons} lesson{lessons_suffix}"
+            label = f"{hinge_prefix}Waypoint {node['id']}: {node['label']}  ·  ~{n_lessons} lesson{lessons_suffix}"
 
             if is_hinge:
                 st.warning(label)
@@ -218,7 +234,7 @@ def show():
                 st.caption(f"⚑ {node['hinge_reason']}")
 
             # Lesson prompt generator
-            with st.expander("Generate lesson prompt for this node"):
+            with st.expander("Generate lesson prompt for this waypoint"):
                 node_key = f"{code}_node_{node['id']}"
                 override_lessons = st.number_input(
                     "Number of lessons",
@@ -237,7 +253,7 @@ def show():
                 )
                 friction_lesson_guidance = {
                     "Low": "Students are likely to move quickly. Prioritise enrichment options to deepen construction. Avoid racing ahead to the next node.",
-                    "Typical": "Maintain minimum width at this node. Use the core width task. Add enrichment only if time allows.",
+                    "Typical": "Maintain minimum width at this waypoint. Use the core width task. Add enrichment only if time allows.",
                     "Medium–High": "Stay near Xmin. Use targeted supports — worked examples, misconception repair, structured sentence starters. Do not widen prematurely."
                 }.get(friction, "Use the core width task.")
 
@@ -269,10 +285,16 @@ def show():
                 if diagnostic_notes.strip():
                     prior_chain_text += f"\nDiagnostic notes: {diagnostic_notes}"
 
-                # Add Y7 node diagnostic rating for this specific node
-                node_diag_key = f"diag_y7_{code}_node_{node['id']}"
-                node_diag_rating = diagnostic_ratings.get(node_diag_key, "")
-                node_diag_text = f"\nDiagnostic rating for this node: {node_diag_rating}" if node_diag_rating else ""
+                # All Y7 waypoints for this standard with diagnostic ratings
+                y7_waypoint_lines = []
+                for n in standards_map[code]["nodes"]:
+                    nkey = f"diag_y7_{code}_node_{n['id']}"
+                    nrating = diagnostic_ratings.get(nkey, "🔴 Gap")
+                    marker = " → THIS WAYPOINT" if n["id"] == node["id"] else ""
+                    y7_waypoint_lines.append(f"Waypoint {n['id']}: {n['label']} [{nrating}]{marker}")
+                y7_waypoints_text = "\n".join(y7_waypoint_lines)
+
+
 
                 # Build friction-aware success criteria
                 sc_xmin = node.get("success_criteria", [])
@@ -286,24 +308,28 @@ def show():
                     sc_lines += ["- Demonstrate: " + enrich_opts[0]]
                 sc_text_prompt = "\n".join(sc_lines)
 
-                lesson_prompt = f"""You are helping a Year 7 Science teacher plan lessons for a single conceptual node.
+                lesson_prompt = f"""You are helping a Year 7 Science teacher plan lessons for a single conceptual waypoint.
 
 CONTEXT
 ──────────────────────────────────
 Subject: Year 7 Science
 Standard: {code}
-Node: {node['id']}. {node['label']}
+Waypoint: {node['id']}. {node['label']}
 Class Friction: {friction}
 Assessment Type: {assessment_type}
 Lessons available: {override_lessons}
 
-CONCEPTUAL POSITION (Y) — overarching learning intention for this node
+CONCEPTUAL POSITION (Y) — overarching learning intention for this waypoint
 ──────────────────────────────────
-{node['y_description']}{node_diag_text}
+{node['y_description']}
 
 PRIOR KNOWLEDGE (what students already know coming into this unit)
 ──────────────────────────────────
 {prior_chain_text}
+
+Y7 WAYPOINT PROGRESS (intra-unit dependencies for {code})
+──────────────────────────────────
+{y7_waypoints_text}
 
 SUCCESS CRITERIA (friction-adjusted for {friction} class)
 ──────────────────────────────────
@@ -333,20 +359,20 @@ Assessment items for this unit:
 YOUR TASK
 ──────────────────────────────────
 Planning structure:
-- Learning intention (shared across all lessons for this node): the node Y description above — do not rewrite or decompose it
+- Learning intention (shared across all lessons for this waypoint): the waypoint Y description above — do not rewrite or decompose it
 - Success criteria: distributed across lessons as targets; each lesson targets one or more from the list above
 - Formative check: directly tests the success criterion(a) targeted in that lesson
 
 Generate a lesson sequence for {override_lessons} lesson(s). For each lesson use this structure:
 
-1. Learning intention — the node Y description (same for all lessons, all classes)
+1. Learning intention — the waypoint Y description (same for all lessons, all classes)
 2. Success criterion(a) targeted this lesson — named from the friction-adjusted list above
 3. Starter activity (5–10 min)
 4. Main activity aligned to the appropriate width level for this friction class
 5. Formative check — directly tests the success criterion(a) named in step 2
 6. Misconceptions to watch for and how to address them
 
-Keep all activities within the conceptual scope of this node. Do not introduce content from later nodes."""
+Keep all activities within the conceptual scope of this waypoint. Do not introduce content from later waypoints."""
 
                 st.code(lesson_prompt, language=None)
                 st.caption("Copy and paste into Claude.ai, ChatGPT, or Gemini.")

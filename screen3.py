@@ -11,10 +11,10 @@ def build_context(selected_codes):
         y_goals.append(f"{code}: {std['y_goal']}")
         for node in std["nodes"]:
             if node["hinge"]:
-                hinge_nodes.append(f"- Node {node['id']} ({code}): {node['label']} — {node.get('hinge_reason', '')}")
+                hinge_nodes.append(f"- Waypoint {node['id']} ({code}): {node['label']} — {node.get('hinge_reason', '')}")
             sc = node.get("success_criteria", [])
             if sc:
-                sc_lines.append(f"Node {node['id']} ({code}) — {node['label']}:")
+                sc_lines.append(f"Waypoint {node['id']} ({code}) — {node['label']}:")
                 for s in sc:
                     sc_lines.append(f"  • {s}")
         chain = get_prior_chain(code)
@@ -52,9 +52,9 @@ def build_assessment_prompt(selected_codes, assessments, existing_tasks, existin
             )
         else:
             timing_note = (
-                "This is a MID-UNIT assessment — cover nodes taught so far, not the full unit."
+                "This is a MID-UNIT assessment — cover waypoints taught so far, not the full unit."
                 if a["timing"] == "Mid-unit"
-                else "This is an END-OF-UNIT assessment — cover all nodes in the unit."
+                else "This is an END-OF-UNIT assessment — cover all waypoints in the unit."
             )
             task_instructions.append(
                 f"OUTPUT {a['id']} — DRAFT: {a['label']} ({a['type']}, {a['timing']})\n"
@@ -107,7 +107,7 @@ HINGE CONCEPTS (must be adequately assessed across items)
 ──────────────────────────────────
 {ctx['hinge_text']}
 
-SUCCESS CRITERIA PER NODE (Section A items must test these)
+SUCCESS CRITERIA PER WAYPOINT (Section A items must test these)
 ──────────────────────────────────
 {ctx['sc_text']}
 
@@ -148,10 +148,10 @@ Design a short pre-unit diagnostic task (10–15 minutes) that:
 - Targets prior knowledge from the pathway above, not Y7 content
 - Surfaces what students already know and common misconceptions
 - Is accessible to all students regardless of prior achievement
-- Generates actionable information: teacher can identify students who need more consolidation at early nodes
+- Generates actionable information: teacher can identify students who need more consolidation at early waypoints
 - Is not a test — frame it as a curiosity or thinking task"""
 
-    # Build Xmin per node for Y7 standards
+    # Build Xmin per waypoint for Y7 standards
     xmin_lines = []
     for code in selected_codes:
         if code not in standards_map:
@@ -159,7 +159,7 @@ Design a short pre-unit diagnostic task (10–15 minutes) that:
         std = standards_map[code]
         xmin_lines.append(f"{code} — {std['title']}:")
         for node in std["nodes"]:
-            xmin_lines.append(f"  Node {node['id']}: {node['xmin']}")
+            xmin_lines.append(f"  Waypoint {node['id']}: {node['xmin']}")
     xmin_text = "\n".join(xmin_lines) if xmin_lines else "None defined"
 
     return f"""You are helping a Year 7 Science teacher design a pre-unit diagnostic assessment.
@@ -175,14 +175,14 @@ PURPOSE
 This diagnostic is completed BEFORE teaching begins. It informs:
 - Where students actually are relative to assumed prior knowledge
 - Whether any students have partial knowledge of Y7 content already
-- Which early nodes may need more consolidation time
+- Which early waypoints may need more consolidation time
 - Initial friction/pace estimate for the class
 
 PRIOR KNOWLEDGE PATHWAY (probe these — what students should already know)
 ──────────────────────────────────
 {ctx['prior_text']}
 
-Y7 NODE MINIMUMS (Xmin — optionally probe these to surface partial Y7 knowledge)
+Y7 WAYPOINT MINIMUMS (Xmin — optionally probe these to surface partial Y7 knowledge)
 ──────────────────────────────────
 {xmin_text}
 

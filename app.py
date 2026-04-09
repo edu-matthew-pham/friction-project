@@ -3,14 +3,14 @@ from utils import init_session_state
 import screen1, screen2, screen3, screen4
 
 # ── Page config ───────────────────────────────────────────────────────────────
-st.set_page_config(page_title="X–Y Unit Planner", page_icon="✦", layout="wide")
+st.set_page_config(page_title="Learning Waypoints", page_icon="✦", layout="wide")
 
 # ── Session state ─────────────────────────────────────────────────────────────
 init_session_state()
 
 # ── Progress indicator ────────────────────────────────────────────────────────
 PAGES = ["s1_curriculum", "s2_nodes", "s3_assessment", "s4_planning"]
-LABELS = ["1. Curriculum Setup", "2. Node Review", "3. Assessment", "4. Class Planning"]
+LABELS = ["1. Curriculum Setup", "2. Waypoint Review", "3. Assessment", "4. Class Planning"]
 
 def show_progress():
     idx = PAGES.index(st.session_state.page) if st.session_state.page in PAGES else 0
@@ -24,8 +24,8 @@ def show_progress():
             col.caption(label)
 
 # ── Header ────────────────────────────────────────────────────────────────────
-st.title("✦ X–Y Unit Planner")
-st.caption("Year 7 Science · Friction Project POC")
+st.title("✦ Learning Waypoints")
+st.caption("Year 7 Science · Beta")
 show_progress()
 st.divider()
 
@@ -40,4 +40,3 @@ elif page == "s3_assessment":
     screen3.show()
 elif page == "s4_planning":
     screen4.show()
-

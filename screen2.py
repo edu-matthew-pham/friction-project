@@ -10,8 +10,8 @@ def show():
         st.session_state.page = "s1_curriculum"
         st.rerun()
 
-    st.subheader("Node Review")
-    st.caption("Review the pre-built node sequence for the selected standards. All nodes are mandatory and ACARA-compliant.")
+    st.subheader("Waypoint Review")
+    st.caption("Review the pre-built waypoint sequence for the selected standards. All waypoints are mandatory and ACARA-compliant.")
 
     total_nodes = sum(len(standards_map[c]["nodes"]) for c in selected_codes if c in standards_map)
     base_lessons = num_lessons / total_nodes if total_nodes else 1
@@ -29,7 +29,7 @@ def show():
             n_lessons = node_lesson_budget(base_lessons, is_hinge)
             summary_rows.append({
                 "Standard": code,
-                "Node": str(node["id"]) + ". " + node["label"],
+                "Waypoint": str(node["id"]) + ". " + node["label"],
                 "Y Position": node.get("y_description") or "",
                 "Hinge": "Yes" if is_hinge else "",
                 "Hinge Reason": node.get("hinge_reason") or "",
@@ -42,14 +42,14 @@ def show():
         hide_index=True,
         column_config={
             "Standard": st.column_config.TextColumn(width="small"),
-            "Node": st.column_config.TextColumn(width="medium"),
+            "Waypoint": st.column_config.TextColumn(width="medium"),
             "Y Position": st.column_config.TextColumn(width="large"),
             "Hinge": st.column_config.TextColumn(width="small"),
             "Hinge Reason": st.column_config.TextColumn(width="large"),
             "Est. Lessons": st.column_config.NumberColumn(width="small"),
         }
     )
-    st.caption("Est. Lessons are indicative only. Hinge nodes are allocated slightly more time by default.")
+    st.caption("Est. Lessons are indicative only. Hinge waypoints are allocated slightly more time by default.")
     st.divider()
 
     # Prior knowledge chain
@@ -65,8 +65,8 @@ def show():
             st.caption(f"{code}: no prior pathway found in progression map.")
     st.divider()
 
-    # Full node detail
-    with st.expander("View full node detail"):
+    # Full waypoint detail
+    with st.expander("View full waypoint detail"):
         for code in selected_codes:
             if code not in standards_map:
                 continue
@@ -77,7 +77,7 @@ def show():
             for node in std["nodes"]:
                 is_hinge = node["hinge"]
                 hinge_prefix = "⚑ HINGE — " if is_hinge else ""
-                st.markdown(f"**{hinge_prefix}Node {node['id']}: {node['label']}**")
+                st.markdown(f"**{hinge_prefix}Waypoint {node['id']}: {node['label']}**")
                 st.caption(f"Y: {node['y_description']}")
                 if node.get("success_criteria"):
                     st.markdown("**✓ Success criteria**")

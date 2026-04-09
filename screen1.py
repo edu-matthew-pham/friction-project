@@ -20,7 +20,7 @@ def show():
 
     if selected_codes:
         total_nodes = sum(len(standards_map[c]["nodes"]) for c in selected_codes if c in standards_map)
-        st.info(f"**{total_nodes} nodes** across {len(selected_codes)} standard(s) · ~**{num_lessons / total_nodes:.1f} lessons/node**")
+        st.info(f"**{total_nodes} waypoints** across {len(selected_codes)} standard(s) · ~**{num_lessons / total_nodes:.1f} lessons/waypoint**")
         for w in compression_warnings(selected_codes, num_lessons):
             st.warning(w)
     else:
@@ -86,7 +86,7 @@ def show():
     st.divider()
     ready = bool(selected_codes)
 
-    if st.button("Review Node Map →", type="primary", disabled=not ready, use_container_width=True):
+    if st.button("Review Waypoint Map →", type="primary", disabled=not ready, use_container_width=True):
         st.session_state.selected_codes = selected_codes
         st.session_state.num_lessons = num_lessons
         # Keep backward compat — set assessment_type from first item

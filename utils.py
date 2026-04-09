@@ -1,7 +1,7 @@
 import json
 import streamlit as st
 
-# ── Load node data from data/ folder ──────────────────────────────────────────
+# ── Load waypoint data from data/ folder ──────────────────────────────────────────
 import os
 import glob
 
@@ -61,13 +61,13 @@ def compression_warnings(selected_codes, num_lessons):
     total_nodes = sum(len(standards_map[c]["nodes"]) for c in selected_codes if c in standards_map)
     base = num_lessons / total_nodes if total_nodes else 1
     if base < 1:
-        warnings.append(f"⚠ Only {num_lessons} lessons for {total_nodes} nodes — some nodes will need to share a lesson.")
+        warnings.append(f"⚠ Only {num_lessons} lessons for {total_nodes} waypoints — some waypoints will need to share a lesson.")
     for code in selected_codes:
         if code not in standards_map:
             continue
         for node in standards_map[code]["nodes"]:
             if node["hinge"] and node_lesson_budget(base, True) < 2:
-                warnings.append(f"⚠ Hinge node '{node['label']}' ({code}) has less than 2 lessons — consider increasing lesson count.")
+                warnings.append(f"⚠ Hinge waypoint '{node['label']}' ({code}) has less than 2 lessons — consider increasing lesson count.")
     return warnings
 
 # ── Session state defaults ─────────────────────────────────────────────────────
@@ -124,7 +124,7 @@ def generate_pdf(selected_codes, num_lessons, assessment_type, assessment_summar
     s_hinge = ParagraphStyle("hi", fontSize=8, textColor=accent, leading=11, fontName="Helvetica-Oblique")
 
     story = []
-    story.append(Paragraph("X–Y Unit Planner", s_title))
+    story.append(Paragraph("Learning Waypoints", s_title))
     story.append(Paragraph(
         f"Year 7 Science · {', '.join(selected_codes)} · {num_lessons} lessons · Assessment: {assessment_type}",
         s_sub))
@@ -146,7 +146,7 @@ def generate_pdf(selected_codes, num_lessons, assessment_type, assessment_summar
 
     # Summary table — all width levels shown
     story.append(Paragraph("Sequence Overview", s_h2))
-    summary_header = [["Standard", "Node", "Y Position", "Hinge", "Est. Lessons"]]
+    summary_header = [["Standard", "Waypoint", "Y Position", "Hinge", "Est. Lessons"]]
     summary_data = []
     for code in selected_codes:
         if code not in standards_map:
@@ -181,7 +181,7 @@ def generate_pdf(selected_codes, num_lessons, assessment_type, assessment_summar
     story.append(HRFlowable(width="100%", thickness=0.5, color=colors.lightgrey))
     story.append(Spacer(1, 0.3*cm))
 
-    # Node detail — all three width levels per node
+    # Waypoint detail — all three width levels per waypoint
     for code in selected_codes:
         if code not in standards_map:
             continue
@@ -198,7 +198,7 @@ def generate_pdf(selected_codes, num_lessons, assessment_type, assessment_summar
 
             hinge_tag = " ⚑ HINGE" if is_hinge else ""
             header_row = [[
-                Paragraph(f"Node {node['id']}: {node['label']}{hinge_tag}",
+                Paragraph(f"Waypoint {node['id']}: {node['label']}{hinge_tag}",
                           ParagraphStyle("nh", fontSize=10, fontName="Helvetica-Bold",
                                          textColor=accent if is_hinge else colors.black)),
                 Paragraph(f"~{n_lessons} lesson{'s' if n_lessons != 1 else ''}",
