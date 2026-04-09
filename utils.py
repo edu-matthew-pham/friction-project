@@ -72,7 +72,7 @@ def compression_warnings(selected_codes, num_lessons):
 
 # ── Session state defaults ─────────────────────────────────────────────────────
 SESSION_DEFAULTS = {
-    "page": "s1_curriculum",
+    "page": "s0_welcome",
     "selected_codes": [],
     "num_lessons": 12,
     "assessment_type": "Test",
