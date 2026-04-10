@@ -53,7 +53,7 @@ def show():
 </div>
 """, unsafe_allow_html=True)
 
-    pdf_url = "https://raw.githubusercontent.com/edu-matthew-pham/friction-project/main/learning_waypoints_onboarding.pdf"
+    pdf_url = "https://raw.githubusercontent.com/edu-matthew-pham/learning-waypoints/main/learning_waypoints_onboarding.pdf"
 
     col_a, col_b, col_c = st.columns(3)
     with col_b:
