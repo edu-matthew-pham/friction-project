@@ -5,11 +5,16 @@ def show():
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
 
+/* Main page container */
+.main > div {
+    padding-top: 1rem;
+}                
+
 .hero-wrap {
     font-family: 'DM Sans', sans-serif;
     max-width: 720px;
     margin: 0 auto;
-    padding: 4rem 0.5rem 3rem;
+    padding: 0.5rem 0.5rem 1rem;
     text-align: center;
 }
 .hero-title {
@@ -40,7 +45,10 @@ def show():
     breaks alignment and makes common assessment hard to justify.
   </p>
   <p class="hero-sub">
-    Learning Waypoints manages pace differences horizontally, not by racing ahead or falling behind.
+    Learning Waypoints manages pace differences horizontally by adjusting pacing, challenge and support, rather than pushing some classes ahead of the shared conceptual sequence.
+  </p>
+  <p class="hero-sub">
+    This supports deeper understanding of core concepts where appropriate, while also helping identify and address gaps to consolidate learning.
   </p>
 </div>
 """, unsafe_allow_html=True)
