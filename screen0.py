@@ -65,7 +65,7 @@ def show():
     st.markdown(
         """
         <div style="text-align:center; margin-top:0.5rem; font-size:0.95rem;">
-        <a href="https://edu-matthew-pham.github.io/acara-progressions/#" target="_blank"
+        <a href="https://acara-progressions.com" target="_blank"
             style="color:#2e6e4e; text-decoration:none;">
             Explore ACARA progression maps
         </a>
