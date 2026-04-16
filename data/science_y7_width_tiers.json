@@ -1,0 +1,367 @@
+{
+  "description": "Width tiers and ACARA elaborations for Science Year 7. Flat lookup by code — U, H and I strand standards. Renderer merges with node map files at runtime via code key.",
+  "subject": "Science",
+  "curriculum": "ACARA v9",
+  "band": "7",
+  "generation_rules": {
+    "prompt_version": "v1.0",
+    "standard_type_applied": "mixed",
+    "primary_width_axis": "phenomena_contexts"
+  },
+  "width_notes": {
+    "minimum_width": "Anchored to the primary command term of the descriptor — the defensible floor. For U: minimum phenomena/contexts to certify the concept. For H/I: encounter/recognise level in the narrowest applicable context.",
+    "typical_width": "Full descriptor scope grounded in most common elaboration cases — sound standard practice. For U: typical phenomena/context range from elaborations. For H/I: comprehend/interpret level across standard elaboration range.",
+    "wider": "Enrichment directions — extended phenomena, contexts or culturally situated cases. Must add phenomena or context; not depth-on-fewer-phenomena. Example directions only — not exhaustive or prescriptive.",
+    "elaborations": "ACARA v9 elaborations verbatim. Source data for the width tiers."
+  },
+  "standards": {
+    "AC9S7U01": {
+      "standard_type": "U",
+      "width_axis": "phenomena_contexts",
+      "minimum_width": "Use a provided dichotomous key to identify organisms; explain why classification systems are used for identification and communication.",
+      "typical_width": "Apply and construct dichotomous keys to classify organisms into nested groups; name species using Linnaean conventions (kingdom to species); explain how classification supports identification and communication across the full range of elaboration examples.",
+      "wider": [
+        "Investigate how biological classification systems have changed over time as microscopy and other technologies have revealed new evidence",
+        "Compare First Nations Australians' systems of classifying living things with Linnaean taxonomy, examining differences in purpose, context and use",
+        "Explore how scientists are currently re-examining organism relationships using new genetic or molecular evidence to refine classification"
+      ],
+      "elaborations": [
+        "observing and identifying the similarities and differences of particular features within and between groups of organisms",
+        "creating and modifying a dichotomous key to classify organisms into groups and groups within groups",
+        "naming and classifying species using scientific conventions from the Linnaean hierarchical classification system, such as kingdom, phylum, class, order, family, genus, species",
+        "considering the reasons for classifying living things, such as identification and communication",
+        "examining how biological classification has changed over time through improvements in microscopy",
+        "using provided dichotomous keys to identify organisms surveyed on a field trip",
+        "investigating First Nations Australians' systems of classifying living things and how these systems differ from those used by contemporary science"
+      ]
+    },
+    "AC9S7U02": {
+      "standard_type": "U",
+      "width_axis": "phenomena_contexts",
+      "minimum_width": "Analyse a food web to show feeding relationships between organisms; identify the role of producers, consumers and decomposers including microorganisms.",
+      "typical_width": "Model energy flow through food webs; predict effects on populations when a species (pollinator, predator) is removed or lost; explain how seasonal changes, habitat destruction or species introduction alter abiotic and biotic factors and cause population changes.",
+      "wider": [
+        "Investigate First Nations Australians' responses to invasive species and their effect on food webs that communities depend on for food and medicine",
+        "Examine how First Nations Australians' fire management practices over tens of thousands of years have changed the distribution of flora and fauna across Australian regions",
+        "Research a specific local ecosystem disruption event and model the cascade of population effects through the food web"
+      ],
+      "elaborations": [
+        "analysing food webs to show feeding relationships between organisms in an ecosystem and the role of microorganisms",
+        "modelling how energy flows into and out of an ecosystem via the pathways of food webs",
+        "predicting the effects on local ecosystems when living things such pollinators or predators are removed from or die out in an area",
+        "examining how events such as seasonal changes, destruction of habitat or introduction of a species impact abiotic and biotic factors and cause changes to populations",
+        "investigating First Nations Australians' responses to invasive species and their effect on food webs that many communities are a part of, and depend on, for produce and medicine",
+        "considering how First Nations Australians' fire management practices over tens of thousands of years have changed the distribution of flora and fauna in most regions of Australia"
+      ]
+    },
+    "AC9S7U03": {
+      "standard_type": "U",
+      "width_axis": "phenomena_contexts",
+      "minimum_width": "Use a model or simulation to explain how Earth's tilt and position relative to the sun causes seasons; explain how the relative positions of Earth, moon and sun cause eclipses.",
+      "typical_width": "Explain seasons, tides and lunar phases using physical or virtual models; describe how the gravitational attraction of the moon and sun produces tidal variations linked to relative positions; explain cyclic patterns of lunar phases and solar and lunar eclipses.",
+      "wider": [
+        "Research First Nations Australians' oral traditions and cultural recordings of solar and lunar eclipses, comparing with contemporary scientific explanations",
+        "Investigate First Nations Australians' calendars and how lunar cycles are used to predict seasonal changes",
+        "Research knowledges held by First Nations Australians regarding lunar phases and the connection between lunar cycles and ocean tides"
+      ],
+      "elaborations": [
+        "using physical models or virtual simulations to explain how Earth's tilt and position relative to the sun causes differences in light intensity on Earth's surface, resulting in seasons",
+        "examining the effect of the gravitational attraction of the moon and the sun on Earth's oceans and describing how the relative positions of the moon and sun with respect to Earth result in tidal variations",
+        "using physical models or virtual simulations to explain the cyclic patterns of lunar phases and eclipses of the sun and moon",
+        "researching knowledges held by First Nations Australians regarding the phases of the moon and the connection between the lunar cycle and ocean tides",
+        "investigating First Nations Australians' calendars and how they are used to predict seasonal changes",
+        "researching First Nations Australians' oral traditions and cultural recordings of solar and lunar eclipses and investigating similarities and differences with contemporary understandings of such phenomena"
+      ]
+    },
+    "AC9S7U04": {
+      "standard_type": "U",
+      "width_axis": "phenomena_contexts",
+      "minimum_width": "Represent balanced and unbalanced forces acting on a familiar object using force arrow diagrams; explain how an unbalanced force changes an object's motion.",
+      "typical_width": "Investigate effects of different forces on objects of same and different mass; measure force magnitude; represent forces using diagrams; explain how gravity relates to mass; analyse balanced and unbalanced forces causing starting, stopping and direction change.",
+      "wider": [
+        "Investigate how simple machines (levers, pulleys) change the magnitude of force needed to perform a task",
+        "Examine how gravity affects objects in space including moons, planets, stars and black holes",
+        "Analyse the forces acting on boomerangs and how First Peoples of Australia designed an aerofoil profile enabling multiple variations and applications",
+        "Investigate how spearthrowers used by First Peoples of Australia or bow and arrows used by Torres Strait Islander Peoples apply force principles through simple machines"
+      ],
+      "elaborations": [
+        "investigating the effects of applying different forces to familiar objects of the same and different mass",
+        "analysing the effect of balanced and unbalanced forces on an object's motion, such as starting, stopping and changing direction",
+        "measuring the magnitude of a force using a force meter and representing the magnitude and direction of forces acting on an object using force arrow diagrams",
+        "investigating how Earth's gravitational force is the attractive force which pulls objects to the centre of Earth and its magnitude is related to the mass of an object",
+        "investigating how simple machines such as levers and pulleys are used to change the magnitude of force needed to perform a task",
+        "examining how gravity affects objects in space, including moons, planets, stars, galaxies and black holes",
+        "analysing the forces acting on boomerangs and how early First Peoples of Australia designed an air foil profile which allowed for multiple variations and applications",
+        "investigating the effect of forces through the application of simple machines, such as the bow and arrows used by Torres Strait Islander Peoples or the spearthrowers used by First Peoples of Australia"
+      ]
+    },
+    "AC9S7U05": {
+      "standard_type": "U",
+      "width_axis": "phenomena_contexts",
+      "minimum_width": "Use particle theory to describe particle arrangement and motion in at least two states of matter and relate this to one observable property of the substance.",
+      "typical_width": "Use particle theory to explain and compare properties (density, melting point, compressibility) across all three states; relate particle motion and energy to distances between particles and attractive forces; explain state changes in terms of heat energy absorbed or released; explain diffusion in liquids and gases.",
+      "wider": [
+        "Investigate properties of specific materials such as density, melting point and compressibility and explain differences between substances using particle theory",
+        "Use models, diagrams or virtual simulations to represent changes in particle arrangement across all state changes including sublimation",
+        "Investigate how particle theory explains phenomena beyond standard states, such as non-Newtonian fluids or plasma"
+      ],
+      "elaborations": [
+        "using and constructing models, diagrams or virtual simulations to represent changes in particle arrangement as substances change state",
+        "relating motion and energy of particles to distances between particles of the same substance in different states",
+        "comparing attractive forces in the solid, liquid and gaseous states of the same substance and relating this to relative position and movement of particles",
+        "examining how the changing motion and energy of particles is affected by the amount of heat energy absorbed or released",
+        "comparing the properties of different states of matter and explaining differences using particle theory",
+        "investigating properties of materials such as density, melting point and compressibility and explaining these in terms of particle arrangement",
+        "explaining the process of diffusion in a liquid and a gas in terms of particles"
+      ]
+    },
+    "AC9S7U06": {
+      "standard_type": "U",
+      "width_axis": "phenomena_contexts",
+      "minimum_width": "Use a particle model to distinguish between pure substances and mixtures; identify solute and solvent in a solution; apply at least one physical separation technique.",
+      "typical_width": "Distinguish pure substances and mixtures using particle representations; investigate and apply a range of separation techniques (filtration, decantation, evaporation, crystallisation, chromatography, distillation); explain how physical properties (particle size, density, volatility) determine the appropriate technique.",
+      "wider": [
+        "Explore and compare separation methods used in real-world contexts such as recycling industries and water purification",
+        "Investigate separation techniques used by First Nations Australians, such as winnowing, yandying, cold-pressing and steam distilling, and relate these to underlying physical properties",
+        "Research how separation techniques are applied in a specific industry context and evaluate the choice of method against the physical properties of the mixture"
+      ],
+      "elaborations": [
+        "using representations of particles to show the difference between samples of pure substances and mixtures, and identifying examples of each",
+        "examining different solutions and identifying the solvent and solute",
+        "investigating and using a range of physical separation techniques such as filtration, decantation, evaporation, crystallisation, chromatography and distillation",
+        "exploring and comparing separation methods used in a variety of situations such as in the home, recycling industries and purifying water",
+        "analysing how the physical properties of substances in mixtures, such as particle size, density or volatility, determine the separation technique used",
+        "investigating separation techniques used by First Nations Australians, such as hand-picking, sieving, winnowing, yandying, filtering, cold-pressing and steam distilling"
+      ]
+    },
+    "AC9S7H01": {
+      "standard_type": "H",
+      "width_axis": "phenomena_contexts",
+      "minimum_width": "Identify one example of how scientific understanding has changed over time as new evidence or methods became available.",
+      "typical_width": "Investigate how scientific understanding in at least two content areas (e.g. classification, astronomy, forces) has developed through new evidence, technology or methods; explain the role of evidence in refining scientific knowledge.",
+      "wider": [
+        "Investigate how First Nations Australians' land management practices, such as fire management, inform contemporary environmental management to protect biodiversity",
+        "Research specific historical developments such as al-Battani's astronomical calculations or aeronautical engineers' evolving understanding of flight forces",
+        "Investigate how First Nations Australians' traditional ecological knowledges inform sustainable harvesting practices of species such as dugongs and turtles"
+      ],
+      "width_notes": "Breadth is primarily number of scientific development examples and contexts. depth_fallback not needed — phenomena/contexts are variable across the elaborations.",
+      "elaborations": [
+        "exploring how scientists are re-examining the relationships between organisms to refine the classification of species as they discover new information or interpret evidence in new ways",
+        "investigating how the land management practices of First Nations Australians inform contemporary management of the environment to protect biodiversity",
+        "investigating how First Nations Australians' traditional ecological and zoological knowledges inform sustainable harvesting practices of certain species, such as dugongs and turtles",
+        "researching developments in the understanding of astronomy, such as the predictions of eclipses and the calculation of the length of the solar year by Abu Abdallah Mohammad ibn Jabir ibn Sinan al-Raqqi al-Harrani al-Sabi al-Battani in the 10th century",
+        "investigating how aeronautical engineers' understanding of the nature of the forces acting in flight have led to changes in the design of aircraft"
+      ]
+    },
+    "AC9S7H02": {
+      "standard_type": "H",
+      "width_axis": "phenomena_contexts",
+      "minimum_width": "Identify one example where personal, cultural or societal perspectives have influenced a scientific question or investigation.",
+      "typical_width": "Explain how personal beliefs, cultural values and societal perspectives influence the questions scientists pursue and how they investigate them, using examples from at least two contexts; consider why different perspectives exist on science-society issues such as biological controls.",
+      "wider": [
+        "Investigate First Nations Australians' classification systems and how they differ in context, purpose and use from those used by contemporary science",
+        "Explore the work of Wang Zhenyi, including her experiments on lunar eclipses, as an example of non-Western scientific contribution",
+        "Explore how David Unaipon used cultural knowledge of boomerang aerodynamics to conceptualise early flight technology in 1914"
+      ],
+      "elaborations": [
+        "investigating classification systems used by First Nations Australians and how they differ in context and use from those used by contemporary science",
+        "investigating how First Nations Australians have developed sustainable harvesting practices and cultural protocols based on deep ecological understandings",
+        "exploring how the personal beliefs of a scientist may influence the questions they choose to pursue and how they investigate those questions, such as Richard Levins, whose political views led him to focus on population ecology, or Joseph Rotblat, a physicist who refused to work on science that might lead to development of an atomic bomb",
+        "considering why it is important to recognise that different people in society have different perspectives on the introduction of biological controls to eradicate an invasive species",
+        "exploring the work of Wang Zhenyi, an acclaimed female scholar of 18th-century China, including her experiments in studying lunar eclipses",
+        "exploring how David Unaipon, a Ngarrindjeri man from Coorong region of South Australia, used his cultural knowledge and understanding of the aerodynamic properties of boomerangs to conceptualise a 'vertical lift flying machine' in 1914"
+      ]
+    },
+    "AC9S7H03": {
+      "standard_type": "H",
+      "width_axis": "phenomena_contexts",
+      "minimum_width": "Identify one example where scientific knowledge intersects with competing values or interests in a real-world context.",
+      "typical_width": "Examine how scientific knowledge interacts with ethical, environmental, social and economic considerations across at least two contexts; explain why stakeholders may hold different views on a science-related issue.",
+      "wider": [
+        "Investigate the contributions of First Nations Australians' knowledges in identifying medicinal properties of endemic plants and the ethical, environmental, social and economic implications of others using these knowledges",
+        "Investigate ethical, environmental, social and economic implications of cross-cultural partnerships that build on First Nations Australians' land management techniques",
+        "Research how properties of gases were used in WWI gas warfare and the subsequent development of international arms control treaties, examining the ethical implications"
+      ],
+      "elaborations": [
+        "investigating how scientific knowledge that larger reserves are better for maintaining ecosystem function might interact with competing viewpoints, values and interests for land use when planning ecological reserves",
+        "examining how laboratory-grown meat might reduce impact on ecosystems and considering any social, ethical and economic implications of developing laboratory-grown meat for wide consumption",
+        "examining how the use of desalination plants to produce fresh water has impacted marine ecosystems where the desalination plants are located",
+        "investigating the contributions of First Nations Australians' knowledges in the identification of medicinal properties of endemic plants and the ethical, environmental, social and economic implications of others using these knowledges",
+        "investigating the ethical, environmental, social and economic implications of proposed scientific responses that involve cross-cultural partnerships and build on First Nations Australians' land management techniques",
+        "discussing how scientific knowledge of the forces involved in flight has led to changes in aircraft design and any ethical, environmental, social and economic considerations of these changes",
+        "researching how properties of gases were utilised in the gas warfare in the First World War and the subsequent development of the Geneva Protocol and the later adoption of the Chemical Weapons Convention international arms control treaty"
+      ]
+    },
+    "AC9S7H04": {
+      "standard_type": "H",
+      "width_axis": "phenomena_contexts",
+      "minimum_width": "Identify one example where science communication has influenced individual viewpoints or community policies.",
+      "typical_width": "Examine how science communication across at least two contexts (e.g. conservation, weather events, waste) has led to changed viewpoints, policies or regulations; explain the mechanisms by which communication influences decision-making.",
+      "wider": [
+        "Investigate how First Nations Australians are using two-way approaches, such as Caring for Country initiatives, to communicate their knowledge and influence related policies",
+        "Reflect on the role of contemporary First Nations Australians astronomers and astrophysicists, such as Wiradjuri astrophysicist Kirsten Banks, in promoting First Nations astronomy knowledges",
+        "Research how global reporting on high-impact weather events has led to the development of warning systems and evacuation policies"
+      ],
+      "elaborations": [
+        "investigating how, through two-way approaches, First Nations Australians are communicating their knowledge and viewpoints, such as Caring for Country and Place initiatives to influence related policies",
+        "examining how science communication of endangered species has led to policies and regulations related to fishing catch and hunting limits",
+        "exploring how Dame Jane Goodall's communication of her research resulted in changed individual viewpoints and conservation policies",
+        "examining how global reporting on high-impact weather events such as cyclones, tidal surges and heatwaves has led to the development of warning systems and evacuation policies",
+        "reflecting on the role of contemporary First Nations Australians astronomers and astrophysicists, such as Wiradjuri astrophysicist and science communicator Kirsten Banks, in promoting First Nations astronomy knowledges and understandings",
+        "investigating how science communication of the impact of waste materials on the environment has led to the adoption of community policies for separating household waste and encouraged other recycling initiatives"
+      ]
+    },
+    "AC9S7I01": {
+      "standard_type": "I",
+      "width_axis": "task_contexts",
+      "minimum_width": "Identify whether a question is investigable; use a provided scaffold to develop a hypothesis for a given investigation.",
+      "typical_width": "Discuss features of investigable and non-investigable questions; develop investigable questions to explore models or test relationships; formulate hypotheses independently, identifying the key elements (variable, predicted outcome, reasoning).",
+      "wider": [
+        "Develop investigable questions in consultation with First Nations Australians to clarify questions based on traditional ecological knowledges",
+        "Develop hypotheses for complex multi-variable questions where the relationship between variables is not immediately obvious",
+        "Evaluate a set of student-generated questions for investigability and refine them into testable hypotheses"
+      ],
+      "elaborations": [
+        "discussing the features of investigable and non-investigable questions, including consideration of school and web-based resources available, and examining their own and others' questions",
+        "consulting with First Nations Australians to clarify questions based on their traditional ecological knowledges, such as predictions regarding the impact of invasive species",
+        "developing investigable questions to explore scientific models, such as: 'How does particle theory explain the properties of substances?'",
+        "developing investigable questions to test relationships, such as: 'How does the volume of a balloon change as it is heated and cooled? What happens to the height of the tide at different points of the lunar cycle?'",
+        "discussing the relationship between a reasoned prediction and a hypothesis, identifying essential elements of a hypothesis and using a provided scaffold to develop hypotheses",
+        "formulating hypotheses such as: 'If the surface area of the parachute is decreased, the parachute will descend more quickly because there will be less air resistance'"
+      ]
+    },
+    "AC9S7I02": {
+      "standard_type": "I",
+      "width_axis": "task_contexts",
+      "minimum_width": "Identify variables and at least one risk in a provided investigation method; explain why controlling variables matters.",
+      "typical_width": "Plan a reproducible investigation method; identify independent, dependent and controlled variables and assumptions; identify risks and ethical considerations including interactions with living things; review and evaluate another student's method.",
+      "wider": [
+        "Collaborate with First Nations Australians communities to plan investigations about ecosystems, ensuring mutually beneficial outcomes and following cultural protocols",
+        "Recognise state and territory laws relating to First Nations Australians' heritage sites and artefacts and integrate these into investigation planning",
+        "Design an investigation that explicitly addresses ethical issues relating to interactions with living organisms and justifies decisions made"
+      ],
+      "elaborations": [
+        "comparing the method with the hypothesis and examining the reasonableness of the method for testing that hypothesis",
+        "discussing why it is important to identify variables and assumptions when planning an investigation",
+        "examining the features of reproducible investigations, constructing methods and reviewing other students' methods",
+        "identifying assumptions relating to variables that are assumed to be constant, such as ambient temperature, properties of materials used or purity of substances",
+        "identifying risks to themselves and others in investigations and considering actions that can be taken to avoid or manage those risks",
+        "considering ethical issues relating to interactions with living things",
+        "recognising state and territory laws as they relate to First Nations Australians' heritage sites and artefacts",
+        "collaborating with First Nations Australians communities and organisations to conduct investigations about ecosystems, ensuring mutually beneficial outcomes",
+        "acknowledging and recognising First Nations Australians' artefacts and heritage sites, such as human stonework and scatter sites in comparison with rocks changed by natural processes, and understanding not to harm or disturb sites"
+      ]
+    },
+    "AC9S7I03": {
+      "standard_type": "I",
+      "width_axis": "task_contexts",
+      "minimum_width": "Select appropriate equipment for a given investigation; record data in a provided table using correct units.",
+      "typical_width": "Select and use equipment appropriate to the investigation's measurement range; construct tables or spreadsheets to collect data; use standard units and perform simple unit conversions; use digital tools such as sensors and field identification apps.",
+      "wider": [
+        "Evaluate how digital tools such as stopwatches and digital scales improve data precision compared to analogue equivalents",
+        "Use field identification apps that use image or call recognition to make identifications during ecosystem investigations",
+        "Design a data collection system for a multi-variable investigation, justifying equipment selection and table structure"
+      ],
+      "elaborations": [
+        "selecting and using equipment appropriate to the investigation, such as ensuring a selected thermometer can measure within the range of temperatures expected, or selecting an appropriate-capacity measuring cylinder for the volume of liquid needed",
+        "examining how the use of digital tools such as stopwatches and digital scales can enable the generation of more precise data",
+        "constructing tables, spreadsheets and graphic organisers to collect data and information",
+        "using appropriate standard units and performing simple unit conversions when recording data",
+        "using digital tools such as sensors to measure abiotic factors and apps that use image or call recognition to make field identifications"
+      ]
+    },
+    "AC9S7I04": {
+      "standard_type": "I",
+      "width_axis": "task_contexts",
+      "minimum_width": "Construct one type of data representation (table, graph or diagram) from collected data; use it to describe a pattern.",
+      "typical_width": "Select appropriate representations for discrete and continuous data; construct food webs, dichotomous keys, graphs and tables; use spreadsheets to aid analysis; analyse secondary data to determine mathematical relationships such as tidal variation over a lunar cycle.",
+      "wider": [
+        "Acknowledge, analyse and interpret data and information from First Nations Australians' astronomical observations",
+        "Code a simple program to represent a dichotomous key as an interactive tool",
+        "Construct representations of data from multiple sources and synthesise findings across representations"
+      ],
+      "elaborations": [
+        "using spreadsheets to aid the presentation and analysis of data",
+        "constructing food webs to represent feeding relationships and flows of energy and matter in an ecosystem",
+        "constructing representations of dichotomous keys, such as a creating a visual key or an interactive presentation, or coding a simple program",
+        "analysing data, including secondary data, to determine mathematical relationships, such as tidal variations over the course of a lunar cycle",
+        "distinguishing between discrete and continuous data and selecting appropriate data representations",
+        "acknowledging, analysing and interpreting data and information from First Nations Australians' astronomical observations"
+      ]
+    },
+    "AC9S7I05": {
+      "standard_type": "I",
+      "width_axis": "task_contexts",
+      "minimum_width": "Identify a pattern or relationship in a provided data set; describe what the pattern shows.",
+      "typical_width": "Identify patterns and relationships across multiple data types; identify anomalies and explain their effect on observed patterns; analyse predator-prey cycles, seasonal patterns and qualitative relationships such as planet mass and gravity.",
+      "wider": [
+        "Collaborate with First Nations Australians communities to create a seasonal calendar as a representation of seasonal patterns and relationships using digital tools",
+        "Investigate a complex multi-variable data set where patterns are non-obvious and anomalies require explanation",
+        "Analyse and compare patterns across multiple secondary data sets, evaluating consistency and credibility of findings"
+      ],
+      "elaborations": [
+        "analysing change in predator and prey numbers over time to identify predator-prey cycles",
+        "identifying patterns and relationships in data sets such as identifying qualitative relationships between the mass of a planet and its gravity",
+        "analysing data to identify patterns in the proportions of a day spent in sunlight and in darkness and relating these patterns to the seasons",
+        "identifying anomalies in data and investigating their effect on observed patterns or relationships",
+        "collaborating with First Nations Australians communities to create a calendar as a representation of seasonal patterns and relationships using digital tools"
+      ]
+    },
+    "AC9S7I06": {
+      "standard_type": "I",
+      "width_axis": "task_contexts",
+      "minimum_width": "Identify one possible source of error in an investigation method and suggest how it could be reduced.",
+      "typical_width": "Evaluate a method by identifying assumptions about controlled variables; identify multiple sources of error; suggest specific improvements with reasoning; consider the spread of repeated measurements; evaluate conclusions against the quality of evidence.",
+      "wider": [
+        "Evaluate conflicting evidence from multiple sources and assess which evidence more strongly supports a conclusion",
+        "Analyse conclusions and claims to identify unstated premises and evaluate their relevance",
+        "Apply evaluative criteria systematically across a set of student investigations to identify common methodological weaknesses"
+      ],
+      "elaborations": [
+        "identifying and considering indicators of the quality of the data when analysing results to identify unanswered questions",
+        "evaluating the method used in an investigation, identifying assumptions made about variables that should be controlled, suggesting ways it could be improved and giving reasons for the suggested changes",
+        "analysing conclusions and claims to identify facts or premises that are taken for granted to be true, and considering their relevance to conclusions",
+        "considering the spread of repeated measurements and observations",
+        "identifying possible sources of error in the method used and describing how the method could be improved to remove these sources of error",
+        "identifying the evidence being cited to support a claim and evaluating conflicting evidence"
+      ]
+    },
+    "AC9S7I07": {
+      "standard_type": "I",
+      "width_axis": "task_contexts",
+      "minimum_width": "Draw a conclusion from evidence that supports or rejects a hypothesis; identify the evidence used.",
+      "typical_width": "Construct an argument supported by evidence and reasoning; draw conclusions that consider data collection method, evidence quality and limitations; evaluate the credibility of a source.",
+      "wider": [
+        "Investigate cultural, historical and archaeological evidence used in the scientific debate about the role of early First Nations Australians in the extinction of Australian megafauna",
+        "Research development of commercial products founded on traditional knowledges of First Nations Australians and discuss ethical considerations around biopiracy and intellectual property rights",
+        "Evaluate a contested scientific claim by systematically assessing the credibility, relevance and sufficiency of evidence from multiple sources"
+      ],
+      "elaborations": [
+        "constructing an argument supported by evidence and reasoning to support or reject a hypothesis",
+        "drawing a logical conclusion in consideration of the method of data collection, quality of evidence and limitations or significance of a claim",
+        "exploring how to determine credibility of a source",
+        "investigating the cultural, historical and archaeological evidence used in the scientific debate about the role of early First Nations Australians in the extinction of Australian megafauna",
+        "researching the development of commercial products that are founded on the traditional knowledges and practices of First Nations Australians and discussing related ethical considerations associated with biopiracy and intellectual property rights"
+      ]
+    },
+    "AC9S7I08": {
+      "standard_type": "I",
+      "width_axis": "task_contexts",
+      "minimum_width": "Report on a scientific investigation using at least one diagram or graphical representation; communicate findings to a known audience.",
+      "typical_width": "Produce a scientific report incorporating diagrams, graphical representations and data; examine accuracy and reproducibility of data; infer purpose and audience from scientific texts; select appropriate text type and language features for the communication purpose.",
+      "wider": [
+        "Develop a prototype dichotomous key app to enable community members to classify plants or animals in a local park or reserve",
+        "Write a letter to the editor expressing a science-informed view about an environmental issue affecting local ecosystems",
+        "Create an animation explaining particle theory or seasonal change to a peer or younger audience"
+      ],
+      "elaborations": [
+        "examining a range of scientific texts, inferring the purpose of the text and target audience, and identifying specific language and text features that support that inference",
+        "reporting on a scientific investigation, incorporating diagrams, graphical representations and data as appropriate, and including examination of the accuracy and reproducibility of the data",
+        "developing a prototype for a dichotomous key app to enable community members to classify plants or animals in a local park or reserve",
+        "writing a letter to the editor to express a view about an environmental issue affecting local ecosystems",
+        "creating an informative text for a younger audience to show how the tilt of Earth's axis, rotation of Earth on that axis, and the revolution of Earth around the sun cause the seasons",
+        "creating an animation that explains particle theory to a peer audience"
+      ]
+    }
+  }
+}
